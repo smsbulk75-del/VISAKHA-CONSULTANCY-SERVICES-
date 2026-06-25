@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISAKHA CONSULTANCY SERVICES — Study Abroad MBBS</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #f6f9fc;
+      color: #1a2634;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* header */
+    header {
+      background: #0b2a40;
+      color: #f0f7fe;
+      padding: 1.2rem 0;
+      box-shadow: 0 4px 16px rgba(0, 20, 40, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 3px solid #4a9eff;
+    }
+
+    .header-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+    .logo span {
+      color: #7bb9ff;
+      font-weight: 300;
+    }
+    .logo small {
+      font-size: 0.8rem;
+      font-weight: 400;
+      display: block;
+      color: #b6d6ff;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #e6f0ff;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+    nav a:hover {
+      color: #7bb9ff;
+      border-bottom-color: #4a9eff;
+    }
+
+    /* hero */
+    .hero {
+      background: linear-gradient(135deg, #e3effa 0%, #c8dff5 100%);
+      padding: 4rem 0 4.5rem;
+      border-radius: 0 0 48px 48px;
+      margin-bottom: 2.5rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 strong {
+      font-weight: 700;
+      color: #0b2a40;
+      background: #ffffffb0;
+      padding: 0 14px;
+      border-radius: 40px;
+    }
+    .hero .tagline {
+      font-size: 1.3rem;
+      max-width: 750px;
+      color: #1a3142;
+      font-weight: 400;
+      background: #ffffff60;
+      backdrop-filter: blur(4px);
+      padding: 0.4rem 1.2rem;
+      border-radius: 60px;
+      display: inline-block;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 800px;
+      color: #1d3346;
+      margin-top: 1rem;
+    }
+
+    /* services / pillars */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      justify-content: center;
+      margin: 3.5rem 0 3rem;
+    }
+    .service-card {
+      background: white;
+      padding: 2rem 1.8rem;
+      border-radius: 32px 10px 32px 10px;
+      box-shadow: 0 8px 28px rgba(0, 30, 60, 0.04);
+      flex: 1 1 170px;
+      text-align: center;
+      transition: all 0.2s ease;
+      border: 1px solid #dce9f5;
+    }
+    .service-card i {
+      font-size: 2.6rem;
+      color: #0b2a40;
+      background: #d2e7ff;
+      padding: 1rem;
+      border-radius: 60px;
+      margin-bottom: 0.8rem;
+    }
+    .service-card h3 {
+      font-weight: 600;
+      font-size: 1.25rem;
+      letter-spacing: -0.2px;
+    }
+    .service-card p {
+      color: #2f4459;
+      font-size: 0.93rem;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: #4a9eff;
+      box-shadow: 0 16px 36px rgba(0, 60, 130, 0.06);
+    }
+
+    /* about / mission */
+    .about-mission {
+      background: white;
+      padding: 2.8rem 2.5rem;
+      border-radius: 36px 10px 36px 10px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.02);
+      margin: 2rem 0 3.5rem;
+      border: 1px solid #e2edf8;
+    }
+    .about-mission h2 {
+      font-weight: 400;
+      font-size: 2.2rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 1.2rem;
+    }
+    .about-mission h2 i {
+      color: #2a7fd4;
+      margin-right: 14px;
+    }
+    .about-mission p {
+      font-size: 1.08rem;
+      max-width: 960px;
+    }
+
+    /* contact block */
+    .contact-block {
+      background: #0b2a40;
+      color: #eaf3fe;
+      padding: 2.8rem 2.5rem;
+      border-radius: 40px 10px 40px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1.05rem;
+    }
+    .contact-item i {
+      font-size: 1.8rem;
+      color: #7bb9ff;
+      width: 2.6rem;
+      text-align: center;
+    }
+    .contact-item a {
+      color: #eaf3fe;
+      text-decoration: none;
+      border-bottom: 1px dotted #7bb9ff80;
+    }
+    .contact-item a:hover {
+      color: #7bb9ff;
+      border-bottom: 1px solid #7bb9ff;
+    }
+
+    /* legal grid */
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      margin: 3.5rem 0 2rem;
+    }
+    .legal-card {
+      background: white;
+      padding: 2rem 1.8rem 2.2rem;
+      border-radius: 28px 6px 28px 6px;
+      border: 1px solid #deeaf6;
+      transition: 0.2s;
+    }
+    .legal-card h3 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.8rem;
+      color: #0b2a40;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .legal-card h3 i {
+      color: #2a7fd4;
+      font-size: 1.5rem;
+    }
+    .legal-card p, .legal-card li {
+      color: #1f3347;
+      font-size: 0.98rem;
+    }
+    .legal-card ul {
+      padding-left: 1.2rem;
+      margin-top: 0.6rem;
+    }
+    .legal-card ul li {
+      margin-bottom: 0.3rem;
+      list-style-type: '✓ ';
+      padding-left: 0.4rem;
+    }
+    .legal-card ul li::marker {
+      color: #2a7fd4;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #c5d8ea;
+      padding: 2.2rem 0 1.8rem;
+      margin-top: 1.5rem;
+      color: #1f3b54;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+    }
+    .copyright i {
+      color: #2a7fd4;
+      margin: 0 4px;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      .header-flex {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      nav a {
+        margin: 0 0.9rem;
+        font-size: 0.98rem;
+      }
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      .contact-block {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .about-mission {
+        padding: 1.8rem;
+      }
+      .legal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 1.6rem;
+      }
+      .service-card {
+        flex: 1 1 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <div class="logo">
+      VISAKHA <span>CONSULTANCY</span>
+      <small>Study Abroad MBBS</small>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#legal">Legal</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1><strong>VISAKHA CONSULTANCY SERVICES</strong></h1>
+      <div class="tagline"><i class="fas fa-graduation-cap" style="margin-right: 10px;"></i> Your gateway to global medical education</div>
+      <p>Leading Study Abroad MBBS Consultancy dedicated to helping students achieve their dream of becoming doctors through international medical education. We provide complete guidance for MBBS admissions abroad, including university selection, application assistance, documentation, visa processing, and pre-departure support, ensuring a smooth and successful journey to top medical universities worldwide.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- service pillars -->
+    <div class="services">
+      <div class="service-card"><i class="fas fa-university"></i><h3>University Selection</h3><p>Top medical universities worldwide</p></div>
+      <div class="service-card"><i class="fas fa-file-signature"></i><h3>Application &amp; Docs</h3><p>Complete assistance &amp; verification</p></div>
+      <div class="service-card"><i class="fas fa-passport"></i><h3>Visa Processing</h3><p>End-to-end visa guidance</p></div>
+      <div class="service-card"><i class="fas fa-plane-departure"></i><h3>Pre-departure Support</h3><p>Smooth transition abroad</p></div>
+    </div>
+
+    <!-- about / mission -->
+    <div class="about-mission">
+      <h2><i class="fas fa-heart"></i> Our Commitment</h2>
+      <p><strong>VISAKHA CONSULTANCY SERVICES</strong> is a leading Study Abroad MBBS Consultancy dedicated to helping students achieve their dream of becoming doctors through international medical education. We provide complete guidance for MBBS admissions abroad, including university selection, application assistance, documentation, visa processing, and pre-departure support, ensuring a smooth and successful journey to top medical universities worldwide.</p>
+      <p style="margin-top: 1rem; background: #e5f0fc; padding: 0.5rem 1.2rem; border-radius: 60px; display: inline-block; color: #0b2a40;"><i class="fas fa-flag" style="margin-right: 8px;"></i> Trusted by students across India</p>
+    </div>
+
+    <!-- contact info -->
+    <div id="contact" class="contact-block">
+      <div class="contact-item"><i class="fas fa-map-pin"></i> <span>Door No: 58-1-253/5, 2nd Floor, Ganesh Nagar, NAD Kotha Road, Butchirajupalem Village, Gopalapatnam Mandal, Visakhapatnam District, Pincode - 530009</span></div>
+      <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:visakhaconsultancyservices@gmail.com">visakhaconsultancyservices@gmail.com</a></div>
+      <div class="contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:+918919236087">8919236087</a></div>
+    </div>
+
+    <!-- Legal: privacy, terms, contact page (condensed) + copyright -->
+    <div id="legal" class="legal-grid">
+      <!-- Privacy Policy -->
+      <div class="legal-card">
+        <h3><i class="fas fa-lock"></i> Privacy Policy</h3>
+        <p><strong>VISAKHA CONSULTANCY SERVICES</strong> respects your privacy. We collect personal data (name, contact, academic info) solely for admission processing and communication. We do not share, sell, or rent your information to any third party except for official university applications and visa purposes. You may request to review or delete your data at any time.</p>
+        <ul>
+          <li>Data used only for admission &amp; visa support</li>
+          <li>Secure storage with restricted access</li>
+          <li>Cookies for session &amp; analytics (optional)</li>
+        </ul>
+      </div>
+
+      <!-- Terms & Conditions -->
+      <div class="legal-card">
+        <h3><i class="fas fa-file-contract"></i> Terms &amp; Conditions</h3>
+        <p>By using our services you agree to these terms. All consultation fees are non-refundable once the admission process begins. We strive to provide accurate information about universities, but we are not liable for changes made by the institutions. Students must meet the eligibility criteria. We assist with visa but do not guarantee approval.</p>
+        <ul>
+          <li>Service fees outlined during consultation</li>
+          <li>University admission subject to their policies</li>
+          <li>We reserve the right to update terms</li>
+        </ul>
+      </div>
+
+      <!-- Contact page summary -->
+      <div class="legal-card">
+        <h3><i class="fas fa-address-card"></i> Contact Page</h3>
+        <p><i class="fas fa-building" style="color:#2a7fd4; width:24px;"></i> <strong>VISAKHA CONSULTANCY SERVICES</strong> — 2nd Floor, Ganesh Nagar, NAD Kotha Road, Visakhapatnam.</p>
+        <p><i class="fas fa-envelope" style="color:#2a7fd4; width:24px;"></i> <a href="mailto:visakhaconsultancyservices@gmail.com" style="color:#0b2a40;">visakhaconsultancyservices@gmail.com</a></p>
+        <p><i class="fas fa-phone" style="color:#2a7fd4; width:24px;"></i> <a href="tel:+918919236087" style="color:#0b2a40;">8919236087</a></p>
+        <p style="margin-top: 0.8rem; font-size: 0.95rem;">Reach out for free consultation, university shortlist, or any queries. We respond within 24 hours.</p>
+      </div>
+    </div>
+
+    <!-- copyright -->
+    <div class="copyright">
+      <i class="far fa-copyright"></i> 2026 <strong>VISAKHA CONSULTANCY SERVICES</strong> — All rights reserved. &nbsp;|&nbsp; Study Abroad MBBS Experts
+    </div>
+  </div>
+</main>
+
+<!-- extra footer badge -->
+<footer style="background: #e3effa; padding: 0.8rem 0; border-top: 1px solid #bed6ed;">
+  <div class="container" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; font-size: 0.9rem; color: #1a3a55;">
+    <span><i class="fas fa-check-circle" style="color:#2a7fd4;"></i> 100% transparent process</span>
+    <span><i class="fas fa-globe-asia" style="color:#2a7fd4;"></i> Top universities worldwide</span>
+    <span><i class="fas fa-handshake" style="color:#2a7fd4;"></i> Dedicated student support</span>
+  </div>
+</footer>
+
+</body>
+</html>
